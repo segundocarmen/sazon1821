@@ -2,16 +2,16 @@
     width: 100%;
     height: 80px;
     display: flex;
-    align-items: center;
-    border-bottom: 1px solid #1e1a17 ;
+    border-bottom: 0.5px solid #bebebe ;
+    & a{
+        color: #1e1a17;
+    }
 }
 
-a{
-    color: #1e1a17 !important;
-}
 .site-header__container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .site-navigation__list{
@@ -22,5 +22,20 @@ a{
         list-style: none;
         margin: 0 15px;
         font-weight: 500;
+    }
+}
+
+.site-header__actions{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;    
+    > a {
+        padding: 10px 15px;
+        display: block;
+        cursor: pointer;
+        border-radius: 8px;
+        color: #b23a2b;
+        font-weight: 700;
+        border: 2px solid #b23a2b;
     }
 }
