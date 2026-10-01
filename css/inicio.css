@@ -8,6 +8,12 @@
     }
 }
 
+.site-header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .site-header__logo{
     font-size: 1.4rem;
     font-weight: 700;
@@ -18,12 +24,6 @@
 
 .site-header__logo > strong {
     color: #b23a2b;
-}
-
-.site-header__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .site-navigation__list{
