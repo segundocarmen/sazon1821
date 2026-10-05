@@ -1,4 +1,4 @@
-const CACHE = 'sazon1821-v1';
+const CACHE = 'sazon1821-v2';
 
 const SHELL = [
     './',
@@ -14,7 +14,9 @@ const SHELL = [
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting())
+        caches.open(CACHE)
+            .then((cache) => cache.addAll(SHELL.map((url) => new Request(url, { cache: 'reload' }))))
+            .then(() => self.skipWaiting())
     );
 });
 
@@ -30,16 +32,18 @@ self.addEventListener('fetch', (event) => {
     const { request } = event;
     if (request.method !== 'GET') return;
 
-    // Páginas: red primero, con respaldo offline
-    if (request.mode === 'navigate') {
+    // Páginas, CSS y JS propios: red primero (sin caché HTTP), con respaldo offline
+    const sameOrigin = new URL(request.url).origin === self.location.origin;
+    const isCode = ['style', 'script', 'manifest'].includes(request.destination);
+    if (request.mode === 'navigate' || (sameOrigin && isCode)) {
         event.respondWith(
-            fetch(request)
+            fetch(request, { cache: 'no-cache' })
                 .then((response) => {
                     const copy = response.clone();
                     caches.open(CACHE).then((cache) => cache.put(request, copy));
                     return response;
                 })
-                .catch(() => caches.match(request).then((cached) => cached || caches.match('index.html')))
+                .catch(() => caches.match(request).then((cached) => cached || (request.mode === 'navigate' ? caches.match('index.html') : undefined)))
         );
         return;
     }
