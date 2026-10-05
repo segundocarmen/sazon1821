@@ -11,7 +11,14 @@
     <meta name="description" content="Ceviches, criollos y fondos de las tres sedes, servidos a tu mesa o lo llevamos hasta tu puerta.">
     <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <!-- Open Graph (WhatsApp, Facebook) -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#b23a2b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sazón 1821">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Sazón 1821">
     <meta property="og:locale" content="es_PE">
@@ -24,13 +31,12 @@
     <meta property="og:image:height" content="1254">
     <meta property="og:image:alt" content="Logo de Sazón 1821">
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sazón 1821 - Cocina peruana con alma de barrio">
     <meta name="twitter:description" content="Ceviches, criollos y fondos de las tres sedes, servidos a tu mesa o lo llevamos hasta tu puerta.">
     <meta name="twitter:image" content="https://segundocarmen.github.io/sazon1821/img/sazon1821.png">
 
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -114,5 +120,10 @@
         </div>
         <p class="site-footer__copy">© 2026 Sazón 1821. Todos los derechos reservados</p>
     </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+        }
+    </script>
 </body>
 </html>
