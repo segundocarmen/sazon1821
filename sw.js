@@ -1,14 +1,28 @@
-const CACHE = 'sazon1821-v2';
+const CACHE = 'sazon1821-v7';
 
 const SHELL = [
     './',
-    'index.html',
+    'carta',
+    'sedes',
+    'nosotros',
+    'contacto',
+    'carrito',
     'css/base.css',
     'css/inicio.css',
-    'img/sazon1821_crop.png',
-    'img/hero-ceviche-clasico.webp',
-    'img/icon-192.png',
-    'img/icon-512.png',
+    'css/carta.css',
+    'css/carta-detalle.css',
+    'css/sedes.css',
+    'css/nosotros.css',
+    'css/contacto.css',
+    'css/carrito.css',
+    'js/main.js',
+    'js/carta-detalle.js',
+    'js/contacto.js',
+    'js/carrito.js',
+    'img/marca/logo-recortado.png',
+    'img/portada/ceviche-clasico.webp',
+    'img/iconos/app-192.png',
+    'img/iconos/app-512.png',
     'manifest.webmanifest'
 ];
 
@@ -43,7 +57,7 @@ self.addEventListener('fetch', (event) => {
                     caches.open(CACHE).then((cache) => cache.put(request, copy));
                     return response;
                 })
-                .catch(() => caches.match(request).then((cached) => cached || (request.mode === 'navigate' ? caches.match('index.html') : undefined)))
+                .catch(() => caches.match(request).then((cached) => cached || (request.mode === 'navigate' ? caches.match('./') : undefined)))
         );
         return;
     }

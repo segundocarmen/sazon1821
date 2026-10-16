@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/carta-detalle.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/carta-detalle.js" defer></script>
+    <title>Arroz con mariscos - Sazón 1821</title>
+    <meta name="description" content="Arroz meloso con conchas, langostinos y calamar, ají panca, alverjas y un toque de limón. S/ 40.">
+    <link rel="icon" type="image/png" href="../img/iconos/favicon.png">
+
+    <link rel="manifest" href="../manifest.webmanifest">
+    <meta name="theme-color" content="#b23a2b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sazón 1821">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="../img/iconos/app-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sazón 1821">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Arroz con mariscos - Sazón 1821">
+    <meta property="og:description" content="Arroz meloso con conchas, langostinos y calamar, ají panca, alverjas y un toque de limón. S/ 40.">
+    <meta property="og:url" content="https://segundocarmen.github.io/sazon1821/platos/carta-arroz-mariscos">
+    <meta property="og:image" content="https://segundocarmen.github.io/sazon1821/img/platos/arroz-mariscos/principal.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="Arroz con mariscos con limón">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arroz con mariscos - Sazón 1821">
+    <meta name="twitter:description" content="Arroz meloso con conchas, langostinos y calamar, ají panca, alverjas y un toque de limón. S/ 40.">
+    <meta name="twitter:image" content="https://segundocarmen.github.io/sazon1821/img/platos/arroz-mariscos/principal.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <header id="header" class="site-header">
+        <div class="site-header__container container">
+            <a class="site-header__logo" href="../"><img src="../img/marca/logo-recortado.png" alt="Logo" width="150px"></a>
+            <nav class="site-navigation">
+
+                <ul class="site-navigation__list">
+                    <li><a class="site-navigation__link" href="../">Inicio</a></li>
+                    <li><a class="site-navigation__link active" href="../carta" aria-current="page">Carta</a></li>
+                    <li><a class="site-navigation__link" href="../sedes">Sedes</a></li>
+                    <li><a class="site-navigation__link" href="../nosotros">Nosotros</a></li>
+                    <li><a class="site-navigation__link" href="../contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__actions">
+                <a href="../carrito" class="site-header__cart" aria-label="Carrito">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="9" cy="20" r="1.5" />
+                        <circle cx="18" cy="20" r="1.5" />
+                        <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6.2" />
+                    </svg>
+                    <span class="site-header__cart-count"></span>
+                </a>
+                <a href="../carta">Pedir ahora</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav class="dish-breadcrumb container" aria-label="Ruta de navegación">
+            <ol class="dish-breadcrumb__list">
+                <li><a href="../">Inicio</a></li>
+                <li><a href="../carta">Carta</a></li>
+                <li><a href="../carta#fondos">Fondos</a></li>
+                <li aria-current="page">Arroz con mariscos</li>
+            </ol>
+        </nav>
+        <section class="dish">
+            <div class="dish__container container">
+                <div class="dish-gallery">
+                    <ul class="dish-gallery__thumbs">
+                        <li>
+                            <button type="button" class="dish-gallery__thumb active" aria-pressed="true"
+                                aria-label="Ver foto 1">
+                                <img src="../img/platos/arroz-mariscos/principal.webp" alt="Arroz con mariscos con limón">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dish-gallery__thumb" aria-pressed="false"
+                                aria-label="Ver foto 2">
+                                <img src="../img/platos/arroz-mariscos/desde-arriba.webp" alt="Arroz con mariscos visto desde arriba" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dish-gallery__thumb" aria-pressed="false"
+                                aria-label="Ver foto 3">
+                                <img src="../img/platos/arroz-mariscos/detalle.webp" alt="Detalle del arroz con mariscos" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="dish-gallery__thumb" aria-pressed="false"
+                                aria-label="Ver foto 4">
+                                <img src="../img/platos/arroz-mariscos/en-mesa.webp" alt="Arroz con mariscos servido con chicha morada" loading="lazy">
+                            </button>
+                        </li>
+                    </ul>
+                    <img src="../img/platos/arroz-mariscos/principal.webp" alt="Arroz con mariscos con limón" class="dish-gallery__main">
+                </div>
+                <form class="dish__info dish-form" data-plato="arroz-mariscos" data-nombre="Arroz con mariscos" data-precio="40">
+                    <h1 class="dish__title">Arroz con mariscos</h1>
+                    <p class="dish__price">S/ 40</p>
+                    <p class="dish__description">Arroz meloso con conchas, langostinos y calamar, ají panca, alverjas y un toque de limón. Picante
+                        <span class="dish__spicy-dots" role="img" aria-label="2 de 4">●●○○</span>
+                        · 25 min · 1 porción
+                    </p>
+                    <p class="dish__meta">Ingredientes: arroz, choros, langostinos, calamar, ají panca, ají amarillo, alverja, pimiento · Alérgenos: mariscos</p>
+
+                    <label class="dish-form__note">
+                        <span class="visually-hidden">Nota para cocina</span>
+                        <textarea class="dish-form__textarea" name="nota" maxlength="120" rows="2"
+                            placeholder="Nota para cocina"></textarea>
+                        <span class="dish-form__counter" aria-live="polite">0/120</span>
+                    </label>
+
+                    <div class="dish-form__actions">
+                        <div class="dish-form__quantity">
+                            <button type="button" data-paso="-1" aria-label="Quitar uno">−</button>
+                            <input type="number" name="cantidad" value="1" min="1" max="20" readonly
+                                aria-label="Cantidad">
+                            <button type="button" data-paso="1" aria-label="Agregar uno">+</button>
+                        </div>
+                        <p class="dish-form__total" aria-live="polite">Total: <strong>S/ 40</strong></p>
+                        <button type="submit" class="dish-form__submit">Agregar al carrito</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="related">
+            <div class="container">
+                <h2 class="section-title">También te puede gustar</h2>
+                <ul class="related__list">
+                    <li>
+                        <a href="carta-causa-limena" class="related__card">
+                            <img src="../img/platos/causa-limena/principal.webp" alt="Causa limeña" class="related__image"
+                                loading="lazy">
+                            <div class="related__body">
+                                <h3 class="related__name">Causa limeña</h3>
+                                <p class="related__price">S/ 24</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="carta-ceviche-clasico" class="related__card">
+                            <img src="../img/platos/ceviche-clasico/principal.webp" alt="Ceviche clásico" class="related__image"
+                                loading="lazy">
+                            <div class="related__body">
+                                <h3 class="related__name">Ceviche clásico</h3>
+                                <p class="related__price">S/ 32</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="carta-tiradito-atun" class="related__card">
+                            <img src="../img/platos/tiradito-atun/principal.webp" alt="Tiradito de atún" class="related__image"
+                                loading="lazy">
+                            <div class="related__body">
+                                <h3 class="related__name">Tiradito de atún</h3>
+                                <p class="related__price">S/ 36</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="carta-lomo-saltado" class="related__card">
+                            <img src="../img/platos/lomo-saltado/principal.webp" alt="Lomo saltado" class="related__image"
+                                loading="lazy">
+                            <div class="related__body">
+                                <h3 class="related__name">Lomo saltado</h3>
+                                <p class="related__price">S/ 38</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__wrapper">
+            <div class="site-footer__container container">
+                <div class="site-footer__brand">
+                    <a href="../" class="site-footer__logo">SAZÓN <strong>1821</strong></a>
+                    <p class="site-footer__text">Cocina peruana con alma de barrio.</p>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Navegación</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="../">Inicio</a></li>
+                        <li><a href="../carta">Carta</a></li>
+                        <li><a href="../sedes">Sedes</a></li>
+                        <li><a href="../nosotros">Nosotros</a></li>
+                        <li><a href="../contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Contacto</h3>
+                    <ul class="site-footer__list">
+                        <li>Av larco</li>
+                        <li>(01) 555 55555</li>
+                        <li>info@sazon1821.com.pe</li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Horario</h3>
+                    <ul class="site-footer__list">
+                        <li>Lunes a sábado 12:00 - 22:00</li>
+                        <li>Domingo 12:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="site-footer__copy">© 2026 Sazón 1821. Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

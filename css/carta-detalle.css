@@ -1,0 +1,371 @@
+.dish-breadcrumb{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dish-breadcrumb__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8rem;
+    color: #7a716a;
+    > li + li::before {
+        content: "›";
+        margin: 0 6px;
+    }
+    & a {
+        color: #7a716a;
+    }
+    & a:hover {
+        color: #b23a2b;
+    }
+    & [aria-current="page"] {
+        color: #1e1a17;
+    }
+}
+
+.dish{
+    padding-bottom: 50px;
+}
+
+.dish__container{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.dish-gallery{
+    display: flex;
+    gap: 12px;
+    width: 52%;
+}
+
+.dish-gallery__thumbs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dish-gallery__thumb{
+    display: block;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+    &:hover,
+    &.active {
+        opacity: 1;
+    }
+    &.active {
+        border-color: #b23a2b;
+    }
+    > img {
+        display: block;
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+    }
+}
+
+.dish-gallery__main{
+    flex: 1;
+    min-width: 0;
+    height: 440px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.dish__info{
+    flex: 1;
+}
+
+.dish__title{
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e1a17;
+    margin-bottom: 6px;
+}
+
+.dish__price{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #b23a2b;
+    margin-bottom: 12px;
+}
+
+.dish__description{
+    color: #7a716a;
+    margin-bottom: 6px;
+}
+
+.dish__spicy-dots{
+    color: #b23a2b;
+    letter-spacing: 1px;
+}
+
+.dish__meta{
+    font-size: 0.8rem;
+    color: #7a716a;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d2c9;
+}
+
+.dish-form__note{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.dish-form__textarea{
+    display: block;
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 12px;
+    border: 1px solid #d9d2c9;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 0.9rem;
+    color: #1e1a17;
+    resize: vertical;
+    &:focus {
+        outline: none;
+        border-color: #b23a2b;
+    }
+}
+
+.dish-form__counter{
+    display: block;
+    margin-top: 4px;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #7a716a;
+}
+
+.dish-form__actions{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #d9d2c9;
+}
+
+.dish-form__quantity{
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d2c9;
+    border-radius: 8px;
+    > button {
+        width: 36px;
+        height: 40px;
+        border: none;
+        background: none;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1e1a17;
+        &:hover {
+            color: #b23a2b;
+        }
+    }
+    > input {
+        width: 32px;
+        border: none;
+        background: none;
+        text-align: center;
+        font-weight: 700;
+        color: #1e1a17;
+        appearance: textfield;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+.dish-form__total{
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #1e1a17;
+}
+
+.dish-form__submit{
+    flex: 1;
+    padding: 10px 20px;
+    border: 2px solid #b23a2b;
+    border-radius: 8px;
+    background-color: #b23a2b;
+    color: #ffffff;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: #962f22;
+    }
+}
+
+.related{
+    padding-bottom: 50px;
+}
+
+.related__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.related__card{
+    display: block;
+    overflow: hidden;
+    border: 1px solid #d9d2c9;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #1e1a17;
+    transition: border-color 0.2s ease;
+    &:hover {
+        border-color: #b23a2b;
+    }
+    &:hover .related__name {
+        color: #b23a2b;
+    }
+}
+
+.related__image{
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.related__body{
+    padding: 12px 14px;
+}
+
+.related__name{
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.related__price{
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #b23a2b;
+}
+
+/* ========== Tablet ========== */
+@media (max-width: 991.98px){
+    .dish__container{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .dish-gallery{
+        width: 100%;
+    }
+
+    .dish-gallery__main{
+        height: 400px;
+    }
+
+    .related__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related__image{
+        height: 170px;
+    }
+}
+
+/* ========== Mobile ========== */
+@media (max-width: 767.98px){
+    .dish-breadcrumb{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .dish{
+        padding-bottom: 35px;
+    }
+
+    .dish-gallery{
+        flex-direction: column-reverse;
+    }
+
+    .dish-gallery__thumbs{
+        flex-direction: row;
+    }
+
+    .dish-gallery__thumb > img{
+        width: 64px;
+        height: 64px;
+    }
+
+    .dish-gallery__main{
+        flex: none;
+        width: 100%;
+        height: 280px;
+    }
+
+    .dish__title{
+        font-size: 1.7rem;
+    }
+
+    .dish-form__actions{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .dish-form__total{
+        margin-left: auto;
+    }
+
+    .dish-form__submit{
+        order: 3;
+        flex-basis: 100%;
+        padding: 12px 20px;
+    }
+
+
+    .related{
+        padding-bottom: 35px;
+    }
+
+    .related__list{
+        gap: 15px 12px;
+    }
+
+    .related__image{
+        height: 130px;
+    }
+}
+
+/* ========== Mobile pequeño ========== */
+@media (max-width: 400px){
+    .dish-gallery__main{
+        height: 230px;
+    }
+
+    .dish-gallery__thumb > img{
+        width: 56px;
+        height: 56px;
+    }
+
+    .related__image{
+        height: 110px;
+    }
+}

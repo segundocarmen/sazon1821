@@ -1,0 +1,151 @@
+.menu-filter{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-filter__link{
+    display: block;
+    padding: 8px 18px;
+    border: 1px solid #d9d2c9;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e1a17;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    &:hover {
+        border-color: #b23a2b;
+        color: #b23a2b;
+    }
+}
+
+.menu-category{
+    padding-bottom: 40px;
+    scroll-margin-top: 90px;
+}
+
+.menu-category__text{
+    margin: -12px 0 20px;
+    color: #7a716a;
+}
+
+.menu-category__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-item{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #d9d2c9;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #1e1a17;
+    transition: border-color 0.2s ease;
+    &:hover {
+        border-color: #b23a2b;
+    }
+    &:hover .menu-item__name,
+    &:hover .menu-item__link {
+        color: #b23a2b;
+    }
+}
+
+.menu-item__image{
+    flex-shrink: 0;
+    width: 160px;
+    object-fit: cover;
+}
+
+.menu-item__body{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px 18px;
+}
+
+.menu-item__heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 6px;
+}
+
+.menu-item__name{
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.menu-item__price{
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #b23a2b;
+}
+
+.menu-item__description{
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #7a716a;
+}
+
+.menu-item__link{
+    margin-top: auto;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e1a17;
+}
+
+/* ========== Tablet ========== */
+@media (max-width: 991.98px){
+    .menu-category__list{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== Mobile ========== */
+@media (max-width: 767.98px){
+    .menu-filter{
+        margin-top: 20px;
+    }
+
+    .menu-category{
+        padding-bottom: 30px;
+        scroll-margin-top: 130px;
+    }
+
+    .menu-category__text{
+        margin-top: -8px;
+        font-size: 0.9rem;
+    }
+
+    .menu-item__image{
+        width: 120px;
+    }
+
+    .menu-item__body{
+        padding: 12px 14px;
+    }
+}
+
+/* ========== Mobile pequeño ========== */
+@media (max-width: 400px){
+    .menu-item__image{
+        width: 95px;
+    }
+
+    .menu-item__heading{
+        flex-direction: column;
+        gap: 2px;
+    }
+}

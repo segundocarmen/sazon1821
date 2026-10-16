@@ -1,0 +1,162 @@
+.story{
+    padding-bottom: 50px;
+}
+
+.story__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.story__content{
+    width: 48%;
+}
+
+.story__text{
+    color: #7a716a;
+    line-height: 1.7;
+}
+
+.story__image{
+    width: 48%;
+    height: 340px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.values{
+    padding-bottom: 50px;
+}
+
+.values__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.values__item{
+    padding: 25px;
+    border: 1px solid #d9d2c9;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.values__icon{
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.values__name{
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e1a17;
+}
+
+.values__text{
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7a716a;
+}
+
+.about-cta{
+    padding-bottom: 50px;
+}
+
+.about-cta__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 35px;
+    border-radius: 16px;
+    background-color: #ebdecd;
+}
+
+.about-cta__title{
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e1a17;
+}
+
+.about-cta__buttons{
+    display: flex;
+    gap: 15px;
+}
+
+/* ========== Tablet ========== */
+@media (max-width: 991.98px){
+    .story__image{
+        height: 300px;
+    }
+
+    .values__list{
+        gap: 15px;
+    }
+
+    .about-cta__container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ========== Mobile ========== */
+@media (max-width: 767.98px){
+    .story{
+        padding-bottom: 35px;
+    }
+
+    .story__container{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .story__content{
+        width: 100%;
+    }
+
+    .story__image{
+        width: 100%;
+        height: 220px;
+    }
+
+    .values{
+        padding-bottom: 35px;
+    }
+
+    .values__list{
+        grid-template-columns: 1fr;
+    }
+
+    .values__item{
+        padding: 20px;
+    }
+
+    .about-cta{
+        padding-bottom: 35px;
+    }
+
+    .about-cta__container{
+        width: calc(100% - 24px);
+        padding: 25px 20px;
+    }
+
+    .about-cta__title{
+        font-size: 1.4rem;
+    }
+
+    .about-cta__buttons{
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+}

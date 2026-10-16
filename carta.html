@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/carta.css">
+    <script src="js/main.js" defer></script>
+    <title>Carta - Sazón 1821</title>
+    <meta name="description" content="Entradas, ceviches y fondos de la cocina peruana de barrio, con precios y delivery a tu puerta.">
+    <link rel="icon" type="image/png" href="img/iconos/favicon.png">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#b23a2b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sazón 1821">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="img/iconos/app-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sazón 1821">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Carta - Sazón 1821">
+    <meta property="og:description" content="Entradas, ceviches y fondos de la cocina peruana de barrio, con precios y delivery a tu puerta.">
+    <meta property="og:url" content="https://segundocarmen.github.io/sazon1821/carta">
+    <meta property="og:image" content="https://segundocarmen.github.io/sazon1821/img/marca/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1254">
+    <meta property="og:image:height" content="1254">
+    <meta property="og:image:alt" content="Logo de Sazón 1821">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carta - Sazón 1821">
+    <meta name="twitter:description" content="Entradas, ceviches y fondos de la cocina peruana de barrio, con precios y delivery a tu puerta.">
+    <meta name="twitter:image" content="https://segundocarmen.github.io/sazon1821/img/marca/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <header id="header" class="site-header">
+        <div class="site-header__container container">
+            <a class="site-header__logo" href="./"><img src="img/marca/logo-recortado.png" alt="Logo" width="150px"></a>
+            <nav class="site-navigation">
+
+                <ul class="site-navigation__list">
+                    <li><a class="site-navigation__link" href="./">Inicio</a></li>
+                    <li><a class="site-navigation__link active" href="carta" aria-current="page">Carta</a></li>
+                    <li><a class="site-navigation__link" href="sedes">Sedes</a></li>
+                    <li><a class="site-navigation__link" href="nosotros">Nosotros</a></li>
+                    <li><a class="site-navigation__link" href="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__actions">
+                <a href="carrito" class="site-header__cart" aria-label="Carrito">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="9" cy="20" r="1.5" />
+                        <circle cx="18" cy="20" r="1.5" />
+                        <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6.2" />
+                    </svg>
+                    <span class="site-header__cart-count"></span>
+                </a>
+                <a href="carta">Pedir ahora</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="page-intro">
+            <div class="container">
+                <h1 class="page-intro__title">Nuestra carta</h1>
+                <p class="page-intro__text">Cocina peruana de barrio, hecha cada día con producto fresco. Elige tu plato
+                    y te lo servimos en mesa o lo llevamos hasta tu puerta.</p>
+                <ul class="menu-filter">
+                    <li><a href="#entradas" class="menu-filter__link">Entradas</a></li>
+                    <li><a href="#ceviches" class="menu-filter__link">Ceviches</a></li>
+                    <li><a href="#fondos" class="menu-filter__link">Fondos</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="menu-category" id="entradas">
+            <div class="container">
+                <h2 class="section-title">Entradas</h2>
+                <p class="menu-category__text">Para abrir el apetito mientras llega el fondo.</p>
+                <ul class="menu-category__list">
+                    <li>
+                        <a href="platos/carta-causa-limena" class="menu-item">
+                            <img src="img/platos/causa-limena/principal.webp" alt="Causa limeña" class="menu-item__image"
+                                loading="lazy">
+                            <div class="menu-item__body">
+                                <div class="menu-item__heading">
+                                    <h3 class="menu-item__name">Causa limeña</h3>
+                                    <p class="menu-item__price">S/ 24</p>
+                                </div>
+                                <p class="menu-item__description">Papa amarilla prensada con ají amarillo y limón, rellena de pollo y palta, con huevo y aceituna.</p>
+                                <span class="menu-item__link">Ver plato →</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="menu-category" id="ceviches">
+            <div class="container">
+                <h2 class="section-title">Ceviches</h2>
+                <p class="menu-category__text">Pescado fresco del día, cortado y marinado al momento.</p>
+                <ul class="menu-category__list">
+                    <li>
+                        <a href="platos/carta-ceviche-clasico" class="menu-item">
+                            <img src="img/platos/ceviche-clasico/principal.webp" alt="Ceviche clásico" class="menu-item__image"
+                                loading="lazy">
+                            <div class="menu-item__body">
+                                <div class="menu-item__heading">
+                                    <h3 class="menu-item__name">Ceviche clásico</h3>
+                                    <p class="menu-item__price">S/ 32</p>
+                                </div>
+                                <p class="menu-item__description">Pescado del día marinado en limón, cebolla roja, ají limo y camote.</p>
+                                <span class="menu-item__link">Ver plato →</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="platos/carta-tiradito-atun" class="menu-item">
+                            <img src="img/platos/tiradito-atun/principal.webp" alt="Tiradito de atún" class="menu-item__image"
+                                loading="lazy">
+                            <div class="menu-item__body">
+                                <div class="menu-item__heading">
+                                    <h3 class="menu-item__name">Tiradito de atún</h3>
+                                    <p class="menu-item__price">S/ 36</p>
+                                </div>
+                                <p class="menu-item__description">Láminas de atún fresco en crema de ají amarillo y limón, con cancha y cilantro.</p>
+                                <span class="menu-item__link">Ver plato →</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="menu-category" id="fondos">
+            <div class="container">
+                <h2 class="section-title">Fondos</h2>
+                <p class="menu-category__text">Platos contundentes, salteados al wok y arroces.</p>
+                <ul class="menu-category__list">
+                    <li>
+                        <a href="platos/carta-lomo-saltado" class="menu-item">
+                            <img src="img/platos/lomo-saltado/principal.webp" alt="Lomo saltado" class="menu-item__image"
+                                loading="lazy">
+                            <div class="menu-item__body">
+                                <div class="menu-item__heading">
+                                    <h3 class="menu-item__name">Lomo saltado</h3>
+                                    <p class="menu-item__price">S/ 38</p>
+                                </div>
+                                <p class="menu-item__description">Lomo fino salteado al wok con cebolla, tomate y ají amarillo, con papas fritas y arroz.</p>
+                                <span class="menu-item__link">Ver plato →</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="platos/carta-arroz-mariscos" class="menu-item">
+                            <img src="img/platos/arroz-mariscos/principal.webp" alt="Arroz con mariscos" class="menu-item__image"
+                                loading="lazy">
+                            <div class="menu-item__body">
+                                <div class="menu-item__heading">
+                                    <h3 class="menu-item__name">Arroz con mariscos</h3>
+                                    <p class="menu-item__price">S/ 40</p>
+                                </div>
+                                <p class="menu-item__description">Arroz meloso con conchas, langostinos y calamar, ají panca, alverjas y un toque de limón.</p>
+                                <span class="menu-item__link">Ver plato →</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__wrapper">
+            <div class="site-footer__container container">
+                <div class="site-footer__brand">
+                    <a href="./" class="site-footer__logo">SAZÓN <strong>1821</strong></a>
+                    <p class="site-footer__text">Cocina peruana con alma de barrio.</p>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Navegación</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="./">Inicio</a></li>
+                        <li><a href="carta">Carta</a></li>
+                        <li><a href="sedes">Sedes</a></li>
+                        <li><a href="nosotros">Nosotros</a></li>
+                        <li><a href="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Contacto</h3>
+                    <ul class="site-footer__list">
+                        <li>Av larco</li>
+                        <li>(01) 555 55555</li>
+                        <li>info@sazon1821.com.pe</li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Horario</h3>
+                    <ul class="site-footer__list">
+                        <li>Lunes a sábado 12:00 - 22:00</li>
+                        <li>Domingo 12:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="site-footer__copy">© 2026 Sazón 1821. Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

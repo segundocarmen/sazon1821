@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sedes.css">
+    <script src="js/main.js" defer></script>
+    <title>Sedes - Sazón 1821</title>
+    <meta name="description" content="Visítanos en Miraflores, San Isidro y Surco. Salón, delivery y recojo en sede.">
+    <link rel="icon" type="image/png" href="img/iconos/favicon.png">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#b23a2b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sazón 1821">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="img/iconos/app-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sazón 1821">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Sedes - Sazón 1821">
+    <meta property="og:description" content="Visítanos en Miraflores, San Isidro y Surco. Salón, delivery y recojo en sede.">
+    <meta property="og:url" content="https://segundocarmen.github.io/sazon1821/sedes">
+    <meta property="og:image" content="https://segundocarmen.github.io/sazon1821/img/sedes/miraflores.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1536">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="Salón de la sede Miraflores">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sedes - Sazón 1821">
+    <meta name="twitter:description" content="Visítanos en Miraflores, San Isidro y Surco. Salón, delivery y recojo en sede.">
+    <meta name="twitter:image" content="https://segundocarmen.github.io/sazon1821/img/sedes/miraflores.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <header id="header" class="site-header">
+        <div class="site-header__container container">
+            <a class="site-header__logo" href="./"><img src="img/marca/logo-recortado.png" alt="Logo" width="150px"></a>
+            <nav class="site-navigation">
+
+                <ul class="site-navigation__list">
+                    <li><a class="site-navigation__link" href="./">Inicio</a></li>
+                    <li><a class="site-navigation__link" href="carta">Carta</a></li>
+                    <li><a class="site-navigation__link active" href="sedes" aria-current="page">Sedes</a></li>
+                    <li><a class="site-navigation__link" href="nosotros">Nosotros</a></li>
+                    <li><a class="site-navigation__link" href="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__actions">
+                <a href="carrito" class="site-header__cart" aria-label="Carrito">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="9" cy="20" r="1.5" />
+                        <circle cx="18" cy="20" r="1.5" />
+                        <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6.2" />
+                    </svg>
+                    <span class="site-header__cart-count"></span>
+                </a>
+                <a href="carta">Pedir ahora</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="page-intro">
+            <div class="container">
+                <h1 class="page-intro__title">Nuestras sedes</h1>
+                <p class="page-intro__text">Tres salones en Lima con la misma sazón. Ven a comer, recoge tu pedido o
+                    pide delivery desde la sede más cercana.</p>
+            </div>
+        </section>
+        <section class="branches">
+            <div class="container">
+                <ul class="branches__list">
+                    <li class="branch">
+                        <img src="img/sedes/miraflores.webp" alt="Salón de la sede Miraflores" class="branch__image">
+                        <div class="branch__body">
+                            <h2 class="branch__name">Miraflores</h2>
+                            <p class="branch__address">Av. Larco 345</p>
+                            <p class="branch__text">Salón luminoso a dos cuadras del parque Kennedy.</p>
+                            <ul class="branch__details">
+                                <li>🕛 Lunes a sábado 12:00 - 22:00</li>
+                                <li>🕛 Domingo 12:00 - 18:00</li>
+                                <li>📞 (01) 555 55555</li>
+                                <li>🍽️ Salón · Delivery · Recojo</li>
+                            </ul>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Larco%20345%2C%20Miraflores%2C%20Lima" class="branch__link" target="_blank" rel="noopener">Cómo llegar</a>
+                        </div>
+                    </li>
+                    <li class="branch">
+                        <img src="img/sedes/san-isidro.webp" alt="Salón de la sede San Isidro" class="branch__image">
+                        <div class="branch__body">
+                            <h2 class="branch__name">San Isidro</h2>
+                            <p class="branch__address">Av. Conquistadores 812</p>
+                            <p class="branch__text">Ambiente clásico, ideal para almuerzos de trabajo.</p>
+                            <ul class="branch__details">
+                                <li>🕛 Lunes a sábado 12:00 - 22:00</li>
+                                <li>🕛 Domingo 12:00 - 18:00</li>
+                                <li>📞 (01) 555 55555</li>
+                                <li>🍽️ Salón · Delivery · Recojo</li>
+                            </ul>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Conquistadores%20812%2C%20San%20Isidro%2C%20Lima" class="branch__link" target="_blank" rel="noopener">Cómo llegar</a>
+                        </div>
+                    </li>
+                    <li class="branch">
+                        <img src="img/sedes/surco.webp" alt="Salón de la sede Surco" class="branch__image">
+                        <div class="branch__body">
+                            <h2 class="branch__name">Surco</h2>
+                            <p class="branch__address">Av. Caminos del Inca 1203</p>
+                            <p class="branch__text">Nuestra sede más grande, con salón para grupos.</p>
+                            <ul class="branch__details">
+                                <li>🕛 Lunes a sábado 12:00 - 22:00</li>
+                                <li>🕛 Domingo 12:00 - 18:00</li>
+                                <li>📞 (01) 555 55555</li>
+                                <li>🍽️ Salón · Delivery · Recojo</li>
+                            </ul>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Caminos%20del%20Inca%201203%2C%20Surco%2C%20Lima" class="branch__link" target="_blank" rel="noopener">Cómo llegar</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__wrapper">
+            <div class="site-footer__container container">
+                <div class="site-footer__brand">
+                    <a href="./" class="site-footer__logo">SAZÓN <strong>1821</strong></a>
+                    <p class="site-footer__text">Cocina peruana con alma de barrio.</p>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Navegación</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="./">Inicio</a></li>
+                        <li><a href="carta">Carta</a></li>
+                        <li><a href="sedes">Sedes</a></li>
+                        <li><a href="nosotros">Nosotros</a></li>
+                        <li><a href="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Contacto</h3>
+                    <ul class="site-footer__list">
+                        <li>Av larco</li>
+                        <li>(01) 555 55555</li>
+                        <li>info@sazon1821.com.pe</li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Horario</h3>
+                    <ul class="site-footer__list">
+                        <li>Lunes a sábado 12:00 - 22:00</li>
+                        <li>Domingo 12:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="site-footer__copy">© 2026 Sazón 1821. Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

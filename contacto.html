@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/contacto.js" defer></script>
+    <title>Contacto - Sazón 1821</title>
+    <meta name="description" content="Escríbenos para reservas, eventos o comentarios. Te respondemos en el día.">
+    <link rel="icon" type="image/png" href="img/iconos/favicon.png">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#b23a2b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sazón 1821">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="img/iconos/app-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sazón 1821">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Contacto - Sazón 1821">
+    <meta property="og:description" content="Escríbenos para reservas, eventos o comentarios. Te respondemos en el día.">
+    <meta property="og:url" content="https://segundocarmen.github.io/sazon1821/contacto">
+    <meta property="og:image" content="https://segundocarmen.github.io/sazon1821/img/marca/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1254">
+    <meta property="og:image:height" content="1254">
+    <meta property="og:image:alt" content="Logo de Sazón 1821">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto - Sazón 1821">
+    <meta name="twitter:description" content="Escríbenos para reservas, eventos o comentarios. Te respondemos en el día.">
+    <meta name="twitter:image" content="https://segundocarmen.github.io/sazon1821/img/marca/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <header id="header" class="site-header">
+        <div class="site-header__container container">
+            <a class="site-header__logo" href="./"><img src="img/marca/logo-recortado.png" alt="Logo" width="150px"></a>
+            <nav class="site-navigation">
+
+                <ul class="site-navigation__list">
+                    <li><a class="site-navigation__link" href="./">Inicio</a></li>
+                    <li><a class="site-navigation__link" href="carta">Carta</a></li>
+                    <li><a class="site-navigation__link" href="sedes">Sedes</a></li>
+                    <li><a class="site-navigation__link" href="nosotros">Nosotros</a></li>
+                    <li><a class="site-navigation__link active" href="contacto" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__actions">
+                <a href="carrito" class="site-header__cart" aria-label="Carrito">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="9" cy="20" r="1.5" />
+                        <circle cx="18" cy="20" r="1.5" />
+                        <path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 8H6.2" />
+                    </svg>
+                    <span class="site-header__cart-count"></span>
+                </a>
+                <a href="carta">Pedir ahora</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="page-intro">
+            <div class="container">
+                <h1 class="page-intro__title">Contacto</h1>
+                <p class="page-intro__text">¿Una reserva, un evento o un comentario? Escríbenos y te respondemos en el
+                    día.</p>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact__container container">
+                <form class="contact-form" novalidate>
+                    <div class="contact-form__row">
+                        <label class="contact-form__field">
+                            <span class="contact-form__label">Nombre</span>
+                            <input type="text" name="nombre" class="contact-form__input" autocomplete="name" required>
+                        </label>
+                        <label class="contact-form__field">
+                            <span class="contact-form__label">Correo</span>
+                            <input type="email" name="correo" class="contact-form__input" autocomplete="email" required>
+                        </label>
+                    </div>
+                    <div class="contact-form__row">
+                        <label class="contact-form__field">
+                            <span class="contact-form__label">Teléfono <small>(opcional)</small></span>
+                            <input type="tel" name="telefono" class="contact-form__input" autocomplete="tel">
+                        </label>
+                        <label class="contact-form__field">
+                            <span class="contact-form__label">Sede</span>
+                            <select name="sede" class="contact-form__input">
+                                <option value="General">Cualquiera</option>
+                                <option value="Miraflores">Miraflores</option>
+                                <option value="San Isidro">San Isidro</option>
+                                <option value="Surco">Surco</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="contact-form__field">
+                        <span class="contact-form__label">Mensaje</span>
+                        <textarea name="mensaje" class="contact-form__input contact-form__textarea" rows="5"
+                            maxlength="500" required></textarea>
+                    </label>
+                    <button type="submit" class="button button--primary contact-form__submit">Enviar mensaje</button>
+                    <p class="contact-form__status" role="status"></p>
+                </form>
+                <aside class="contact-info">
+                    <h2 class="contact-info__title">Otras formas de contactarnos</h2>
+                    <ul class="contact-info__list">
+                        <li>
+                            <span class="contact-info__label">Teléfono</span>
+                            <a href="tel:+5115555555">(01) 555 55555</a>
+                        </li>
+                        <li>
+                            <span class="contact-info__label">Correo</span>
+                            <a href="mailto:info@sazon1821.com.pe">info@sazon1821.com.pe</a>
+                        </li>
+                        <li>
+                            <span class="contact-info__label">Horario</span>
+                            Lunes a sábado 12:00 - 22:00<br>Domingo 12:00 - 18:00
+                        </li>
+                        <li>
+                            <span class="contact-info__label">Sedes</span>
+                            <a href="sedes">Miraflores, San Isidro y Surco</a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__wrapper">
+            <div class="site-footer__container container">
+                <div class="site-footer__brand">
+                    <a href="./" class="site-footer__logo">SAZÓN <strong>1821</strong></a>
+                    <p class="site-footer__text">Cocina peruana con alma de barrio.</p>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Navegación</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="./">Inicio</a></li>
+                        <li><a href="carta">Carta</a></li>
+                        <li><a href="sedes">Sedes</a></li>
+                        <li><a href="nosotros">Nosotros</a></li>
+                        <li><a href="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Contacto</h3>
+                    <ul class="site-footer__list">
+                        <li>Av larco</li>
+                        <li>(01) 555 55555</li>
+                        <li>info@sazon1821.com.pe</li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Horario</h3>
+                    <ul class="site-footer__list">
+                        <li>Lunes a sábado 12:00 - 22:00</li>
+                        <li>Domingo 12:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="site-footer__copy">© 2026 Sazón 1821. Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
