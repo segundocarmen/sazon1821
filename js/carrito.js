@@ -94,6 +94,12 @@ function iniciarCarrito() {
         render();
     });
 
+    // El checkout avisa cuando confirma un pedido y vacía el carrito
+    document.addEventListener('carrito:actualizado', () => {
+        items = leerCarrito();
+        render();
+    });
+
     render();
 }
 

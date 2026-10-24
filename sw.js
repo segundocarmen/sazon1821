@@ -1,4 +1,4 @@
-const CACHE = 'sazon1821-v7';
+const CACHE = 'sazon1821-v8';
 
 const SHELL = [
     './',
@@ -19,6 +19,7 @@ const SHELL = [
     'js/carta-detalle.js',
     'js/contacto.js',
     'js/carrito.js',
+    'js/checkout.js',
     'img/marca/logo-recortado.png',
     'img/portada/ceviche-clasico.webp',
     'img/iconos/app-192.png',

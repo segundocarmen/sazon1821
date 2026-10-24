@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/carrito.css">
     <script src="js/main.js" defer></script>
     <script src="js/carrito.js" defer></script>
+    <script src="js/checkout.js" defer></script>
     <title>Tu carrito - Sazón 1821</title>
     <meta name="description" content="Revisa los platos de tu pedido y ajusta las cantidades.">
     <link rel="icon" type="image/png" href="img/iconos/favicon.png">
@@ -109,7 +110,11 @@
                     </table>
                     <div class="cart__actions">
                         <a href="carta" class="button button--secondary">Seguir pidiendo</a>
-                        <button type="button" class="cart__clear">Vaciar carrito</button>
+                        <div class="cart__actions-end">
+                            <button type="button" class="cart__clear">Vaciar carrito</button>
+                            <button type="button" class="button button--primary" data-bs-toggle="modal"
+                                data-bs-target="#checkout">Proceder con el pago</button>
+                        </div>
                     </div>
                 </div>
                 <div class="cart-empty" hidden>
@@ -118,6 +123,157 @@
                 </div>
             </div>
         </section>
+        <div class="modal fade checkout" id="checkout" tabindex="-1" aria-labelledby="checkout-titulo"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                <div class="modal-content checkout__content">
+                    <div class="modal-header">
+                        <h2 class="modal-title checkout__title" id="checkout-titulo">Finalizar pedido</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <form class="checkout-form" novalidate>
+                        <div class="modal-body">
+                            <p class="checkout__notice" role="note">🔒 Pago de demostración: no se realiza ningún cobro y
+                                los datos de la tarjeta no se guardan ni se envían.</p>
+                            <div class="checkout__grid">
+                                <div class="checkout__fields">
+                                    <fieldset class="checkout__group">
+                                        <legend class="checkout__legend">1. Entrega</legend>
+                                        <div class="checkout__choices">
+                                            <input type="radio" class="btn-check" name="entrega" id="entrega-delivery"
+                                                value="delivery" checked>
+                                            <label class="checkout__choice" for="entrega-delivery">🚚 Delivery
+                                                <small>45 min · S/ 5</small></label>
+                                            <input type="radio" class="btn-check" name="entrega" id="entrega-recojo"
+                                                value="recojo">
+                                            <label class="checkout__choice" for="entrega-recojo">🏠 Recojo en sede
+                                                <small>30 min · gratis</small></label>
+                                        </div>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="checkout-nombre">Nombre completo</label>
+                                                <input type="text" class="form-control" id="checkout-nombre" name="nombre"
+                                                    autocomplete="name" required>
+                                                <div class="invalid-feedback">Escribe tu nombre.</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="checkout-telefono">Celular</label>
+                                                <input type="tel" class="form-control" id="checkout-telefono"
+                                                    name="telefono" autocomplete="tel" inputmode="numeric"
+                                                    placeholder="987 654 321" required>
+                                                <div class="invalid-feedback">Ingresa un celular de 9 dígitos.</div>
+                                            </div>
+                                            <div class="col-12" data-entrega="delivery">
+                                                <label class="form-label" for="checkout-direccion">Dirección de
+                                                    entrega</label>
+                                                <input type="text" class="form-control" id="checkout-direccion"
+                                                    name="direccion" autocomplete="street-address"
+                                                    placeholder="Calle, número, distrito y referencia" required>
+                                                <div class="invalid-feedback">Indica a dónde llevamos tu pedido.</div>
+                                            </div>
+                                            <div class="col-12" data-entrega="recojo" hidden>
+                                                <label class="form-label" for="checkout-sede">Sede de recojo</label>
+                                                <select class="form-select" id="checkout-sede" name="sede">
+                                            <option value="Miraflores">Miraflores · Av. Larco 345</option>
+                                            <option value="San Isidro">San Isidro · Av. Conquistadores 812</option>
+                                            <option value="Surco">Surco · Av. Caminos del Inca 1203</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="checkout__group">
+                                        <legend class="checkout__legend">2. Pago</legend>
+                                        <div class="checkout__choices">
+                                            <input type="radio" class="btn-check" name="pago" id="pago-tarjeta"
+                                                value="tarjeta" checked>
+                                            <label class="checkout__choice" for="pago-tarjeta">💳 Tarjeta
+                                                <small>Crédito o débito</small></label>
+                                            <input type="radio" class="btn-check" name="pago" id="pago-efectivo"
+                                                value="efectivo">
+                                            <label class="checkout__choice" for="pago-efectivo">💰 Pago al recibir
+                                                <small>Efectivo o POS</small></label>
+                                        </div>
+                                        <div class="row g-3" data-pago="tarjeta">
+                                            <div class="col-12">
+                                                <label class="form-label" for="checkout-tarjeta">Número de
+                                                    tarjeta</label>
+                                                <div class="checkout__card-number">
+                                                    <input type="text" class="form-control" id="checkout-tarjeta"
+                                                        name="tarjeta" autocomplete="cc-number" inputmode="numeric"
+                                                        placeholder="4242 4242 4242 4242" maxlength="23" required>
+                                                    <span class="checkout__brand" aria-live="polite"></span>
+                                                </div>
+                                                <div class="invalid-feedback">El número de tarjeta no es válido.</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label" for="checkout-titular">Nombre en la
+                                                    tarjeta</label>
+                                                <input type="text" class="form-control" id="checkout-titular"
+                                                    name="titular" autocomplete="cc-name" required>
+                                                <div class="invalid-feedback">Escribe el nombre como aparece en la
+                                                    tarjeta.</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label" for="checkout-vencimiento">Vencimiento</label>
+                                                <input type="text" class="form-control" id="checkout-vencimiento"
+                                                    name="vencimiento" autocomplete="cc-exp" inputmode="numeric"
+                                                    placeholder="MM/AA" maxlength="5" required>
+                                                <div class="invalid-feedback">Fecha inválida o vencida.</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label" for="checkout-cvv">CVV</label>
+                                                <input type="password" class="form-control" id="checkout-cvv" name="cvv"
+                                                    autocomplete="cc-csc" inputmode="numeric" placeholder="123"
+                                                    maxlength="4" required>
+                                                <div class="invalid-feedback">CVV inválido.</div>
+                                            </div>
+                                            <p class="checkout__hint col-12">Prueba con 4242 4242 4242 4242 (aprobada) o
+                                                4000 0000 0000 0002 (rechazada), cualquier fecha futura y CVV.</p>
+                                        </div>
+                                        <p class="checkout__hint" data-pago="efectivo" hidden>Paga en efectivo o con
+                                            tarjeta al recibir tu pedido. Si necesitas vuelto, indícalo al
+                                            repartidor.</p>
+                                    </fieldset>
+                                    <div class="alert alert-danger checkout__error" role="alert" hidden></div>
+                                </div>
+
+                                <aside class="checkout-summary" aria-label="Resumen del pedido">
+                                    <h3 class="checkout-summary__title">Tu pedido</h3>
+                                    <ul class="checkout-summary__list"></ul>
+                                    <dl class="checkout-summary__totals">
+                                        <div>
+                                            <dt>Subtotal</dt>
+                                            <dd class="checkout-summary__subtotal">S/ 0</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Delivery</dt>
+                                            <dd class="checkout-summary__delivery">S/ 5</dd>
+                                        </div>
+                                        <div class="checkout-summary__total">
+                                            <dt>Total</dt>
+                                            <dd class="checkout-summary__total-amount">S/ 0</dd>
+                                        </div>
+                                    </dl>
+                                </aside>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button button--secondary" data-bs-dismiss="modal">Volver al
+                                carrito</button>
+                            <button type="submit" class="button button--primary checkout__submit">Pagar S/ 0</button>
+                        </div>
+                    </form>
+                    <div class="checkout-success" hidden>
+                        <span class="checkout-success__icon" aria-hidden="true">✓</span>
+                        <h2 class="checkout-success__title">¡Pedido confirmado!</h2>
+                        <p class="checkout-success__order">Pedido <strong class="checkout-success__number"></strong></p>
+                        <p class="checkout-success__text"></p>
+                        <a href="carta" class="button button--primary">Volver a la carta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
